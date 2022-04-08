@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <title>Sentiment Analysis</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<!--    <link rel="stylesheet" type="text/css" href="D:/SUNBEAM/projects/main project/app/flask/templates/csspractice.css">-->
+
+    <style>
+          body{
+                background-image : url("https://wallpapercave.com/w/wp3053723.jpg") ;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: 100% 100%;
+
+
+                margin:20px;
+
+<!--                    #background: #4d0026;-->
+<!--                    background: linear-gradient(to left, #667292 0%, #a2b9bc 100%);-->
+          }
+
+          footer a{
+            color: #fff;
+          }
+
+          footer a:hover{
+            color: #fff;
+          }
+
+          .centerdiv{
+            height: 15vh;
+            display: flex;
+            #justify-content: center;
+            align-items: center;
+          }
+
+          .centerdiv a{
+            height: 100px;
+            width: 30px;
+            background-color: #f5f6fa;
+            border-radius: 50px;
+            text-align: center;
+            margin: 5px;
+            line-height: 30px;
+            #box-shadow: 1px 4px 2px 2px #dcdde1;
+            position: relative;
+            overflow: hidden;
+          }
+
+          .centerdiv a i{
+            transition: all 0.3s linear;
+          }
+
+          .centerdiv a:hover i{
+            transform: scale(1.5);
+            color: #f5f6fa;
+          }
+
+          .centerdiv a:before{
+            content: "";
+            width: 120%; height: 120%;
+            position: absolute;
+            top: 90%; left: -50%;
+            background-color: #00a7ff;
+            transform: rotate(60deg);
+          }
+
+          .centerdiv a:hover:before{
+            animation: socialicons 0.8s 1;
+            animation-fill-mode: forwards;
+          }
+
+          .btn-primary{
+                margin-top: 10px;
+          }
+
+          .btn-danger{
+                margin-top: 10px;
+                margin-left: 10px
+          }
+
+    </style>
+
+</head>
+
+<body>
+
+<h1>
+    <div style="text-align:center">
+        <font color='white'>
+           Sentiment Analysis
+        </font>
+    </div>
+</h1>
+<br>
+
+
+<div class="wrapper">
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-md-10 col-sm-6 mx-auto">
+                <form class="" action="/predict" method="post">
+
+                    <div class="form-group">
+                        <label for="sentiment" class="ph-area"><h4><font color='white'>Enter Review</font></h4></label>
+                        <input type="text" name="sentiment" id="sentiment" class="form-control" placeholder="Enter Review">
+
+
+                        <div class="form-group">
+                            <input type="submit" class="btn btn-primary" value="Submit">
+                            <input type="reset" class="btn btn-danger" value="Reset">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+
+</html>
